@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background: #222;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  font-family: 'Garamond';
+  font-variant: small-caps;
+  color: #444;
+  background: #55d6aa;
+  padding-bottom: 3px;
+}
+
+h2 {
+  font-variant: small-caps;
+  font-size: 24px;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.title {
+  font-size: 32 px;
+  float: left;
+}
+
+nav {
+  float: right
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 100px;
+  padding-top: 25px;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #444;
+
+  position: relative;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #444;
+
+  position: relative;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+  transition-delay: 250ms;
+  animation-direction: alternate;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
