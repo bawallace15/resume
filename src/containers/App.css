@@ -1,12 +1,21 @@
 body {
   margin: 0;
-  background: #222;
+  background: #07116e;
   font-family: sans-serif;
   font-weight: 500;
   color: white;
 }
 
-.container {
+.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.nav-header {
   width: 80%;
   margin: 0 auto;
 }
@@ -15,7 +24,7 @@ header {
   font-family: 'Garamond';
   font-variant: small-caps;
   color: #444;
-  background: #55d6aa;
+  background: white;
   padding-bottom: 3px;
 }
 
@@ -40,8 +49,8 @@ nav {
 }
 
 nav ul {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   list-style: none;
 }
 
@@ -49,6 +58,8 @@ nav li {
   display: inline-block;
   margin-left: 100px;
   padding-top: 25px;
+
+  position: relative;
 }
 
 nav a {
@@ -65,37 +76,21 @@ nav a::before {
   content: '';
   display: block;
   height: 5px;
-  width: 100%;
   background-color: #444;
 
-  position: relative;
+  position: absolute;
   top: 0;
   width: 0%;
 
   transition: all ease-in-out 250ms;
-}
-
-nav a::after {
-  content: '';
-  display: block;
-  height: 5px;
-  width: 100%;
-  background-color: #444;
-
-  position: relative;
-  top: 0;
-  width: 0%;
-
-  transition: all ease-in-out 250ms;
-  transition-delay: 250ms;
-  animation-direction: alternate;
 }
 
 nav a:hover::before {
   width: 100%;
 }
 
-nav a:hover::after {
-  width: 100%;
+card-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
-
