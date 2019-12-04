@@ -1,0 +1,24 @@
+.res-row {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-bottom-width: 1px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.compinfo {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.roleinfo {
+    width: 70vw;
+}
+
+.company {
+}
