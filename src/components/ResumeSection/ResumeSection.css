@@ -1,7 +1,6 @@
 .res-row {
     display: flex;
     flex-direction: row;
-    border-style: solid;
     border-bottom-width: 1px;
     padding: 20px;
     margin-left: 20px;
@@ -18,7 +17,4 @@
 
 .roleinfo {
     width: 70vw;
-}
-
-.company {
 }

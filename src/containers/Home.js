@@ -47,16 +47,16 @@ const AboutText = `I graduated from Penn State University in 2018 with a degree 
 
 const home = () => {
     return (
-        <home>
+        <div id='home'>
             <Particles className='particles'
                 params={particleOptions}/>
             <TextSection title='About Me' text={AboutText} />
-            <card-list>
+            <cardlist className='container'>
                 <Card media='LinkedIn' username='Ben Wallace' pic={linkedin} link='https://www.linkedin.com/in/ben-wallace-77bb9b9a/'/>
                 <Card media='GitHub' username='benwallace15' pic={github} link='https://github.com/benwallace15'/>
                 <Card media='Quantopian' username='Ben Wallace' pic={quantlogo} link='https://www.quantopian.com/users/5d33abdf04ee91003fac2d73'/>
-            </card-list>
-        </home>
+            </cardlist>
+        </div>
     )
 }
 
