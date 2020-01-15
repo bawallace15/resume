@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from 'react-helmet'
 import './Resume.css';
 import ResumeSection from '../components/ResumeSection/ResumeSection';
 import TechCard from '../components/TechCard/TechCard';
@@ -33,6 +34,9 @@ class App extends Component {
   render() {
     return (
       <resume>
+        <Helmet>
+          <title>Ben's Resume</title>
+        </Helmet>
         <ResumeSection logo={LMlogo} company='Lockheed Martin' title='Systems Engineer (6/2018-7/2019)' accomp={sys} />
         <ResumeSection logo={LMlogo} company='Lockheed Martin' title='Quality Engineer (7/2019-CURRENT)' accomp={qa} />
         <h1 className='resume-title'>Technical Skills</h1>

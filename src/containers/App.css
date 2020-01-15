@@ -1,14 +1,20 @@
-/* .nav-header {
+.nav-header {
   width: 80%;
   margin: 0 auto;
 }
 
 header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   font-family: 'Garamond';
   font-variant: small-caps;
   color: #444;
   background: white;
-  padding-bottom: 3px;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
 }
 
 h2 {
@@ -70,4 +76,4 @@ nav a::before {
 
 nav a:hover::before {
   width: 100%;
-} */
+}
