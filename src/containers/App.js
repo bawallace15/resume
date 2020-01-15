@@ -6,7 +6,9 @@ class App extends Component {
   //Routing is stored in the top menu, which is how the pages get rendered
   render() {
     return (
-      <TopMenu />
+      <div>
+        <TopMenu />
+      </div>
     )
   }
 }
