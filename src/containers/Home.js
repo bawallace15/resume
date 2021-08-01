@@ -2,59 +2,33 @@ import React from 'react';
 import Card from '../components/Card/Card';
 import TextSection from '../components/TextSection/TextSection';
 import './Home.css';
+import 'tachyons';
 
 import linkedin from '../img/LinkedIn_logo.png';
 import github from '../img/github.svg';
-import quantlogo from '../img/quantopian-logo.png';
+import profpic from '../img/snowboard_pic_cropped.jpg';
 
-import Particles from 'react-particles-js';
+const AboutText = `Hello and welcome to my website! I am a Mechanical Engineer who does 0 Mechanical Engineering because 
+I love software development. Most of my development experience is in Automation, Data Science, Web Development, and 
+Infrasturcture. I mostly work in Python and JavaScript, but I know TypeScript and Java as well. I graduated from Penn State 
+in 2018 and have worked for Lockheed Martin since then. Currently, I am working on my Master's in Computer Science from 
+Steven's Institute of Technology. In the very little free time I have I enjoy playing and watching soccer, running, working 
+out, snowboarding and learning about new technologies. 
 
-const particleOptions = {
-  particles: {
-    number: {
-      value: 100,
-      density: {
-        enable: true,
-        value_area: 750
-      }
-    }
-  },
-  interactivity: {
-    events: {
-        onhover: {
-            enable: true,
-            mode: "bubble"
-        }
-    },
-    modes: {
-        bubble: {
-            size: 20,
-            distance: 60
-        }
-    }
-  }
-}
+I use this site as a more extensive resume, as well as, a playground for testing out anything related to web development. 
+If something is buggy, I may have broken it while playing around with something. The site is just a basic ReactJS app.
+The code can be found on my GitHub. If you would like to get in contact with me, feel free to contact me on LinkedIn!`;
 
-const AboutText = `I graduated from Penn State University in 2018 with a degree in
- Mechanical Engineering and I have worked for Lockheed Martin since then. My first 
- job at Lockheed was as a Software Systems Engineer. I quickly gained a passion for 
- Software, specifically Web Development. This site is not only to show what I know,
- but also to act as a playground for me to experiment with. Below you can see my 
- LinkedIn, Github, and Quantopian profiles. Quantopian is a python platform and
- library for creating, testing, and deploying financial trading algorithms. I have
- experimented with Quantopian and have made a few basic (terrible) algorithms, but 
- have yet to deploy an algorithm that trades real money.`
-
-const home = () => {
+function home() {
     return (
         <div id='home'>
-            <Particles className='particles'
-                params={particleOptions}/>
+            <div className='container' style={{width: "100vw"}}>
+                <img className='tc br-100 ma3' alt='profile-pic' src={profpic} width='150' height='150'/>
+            </div>
             <TextSection title='About Me' text={AboutText} />
             <cardlist className='container'>
                 <Card media='LinkedIn' username='Ben Wallace' pic={linkedin} link='https://www.linkedin.com/in/ben-wallace-77bb9b9a/'/>
-                <Card media='GitHub' username='benwallace15' pic={github} link='https://github.com/benwallace15'/>
-                <Card media='Quantopian' username='Ben Wallace' pic={quantlogo} link='https://www.quantopian.com/users/5d33abdf04ee91003fac2d73'/>
+                <Card media='GitHub' username='bawallace15' pic={github} link='https://github.com/bawallace15'/>
             </cardlist>
         </div>
     )

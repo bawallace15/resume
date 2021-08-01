@@ -1,15 +1,6 @@
-import React, { Component } from 'react';
-import './Resume.css';
-import ResumeSection from '../components/ResumeSection/ResumeSection';
-import TechCard from '../components/TechCard/TechCard';
-
+import React from 'react';
+import ResumeSection from '../components/ResumeSection/ResumeSection'
 import LMlogo from '../img/Lockheed-martin-logo.png';
-import jslogo from '../img/javascript.png';
-import reactlogo from '../img/react.png';
-import nodelogo from '../img/nodejs-logo.png';
-import pythonlogo from '../img/python.png';
-import k8slogo from '../img/kubernetes.png';
-import dockerlogo from '../img/docker-logo.png';
 
 const sys = ['Led project to develop a python 600+ line script to troubleshoot typical issues with development deployments', 
 'Created automated test to gain insights on performance variation over time and on different environments',
@@ -21,32 +12,21 @@ const sys = ['Led project to develop a python 600+ line script to troubleshoot t
 'Debugged system errors and inconsistencies in order to determine root causes',
 'Edited process and code configurations to apply systems in offline environments']
 
-const qa = ['Established Agile team for an internal site and tool redesign project',
+const proj = ['Established Agile team for an internal site and tool redesign project',
 'Scoped work and created project schedule for internal site and tool redesign project',
 'Currently project lead for internal site and tool redesign project',
 'Successfully created python script that pulls and organizes data to produce key metrics for a poorly performing process to track improvement effectiveness',
 'Investigating root cause behind process issues that cause about $1.1M in reprocessing per year',
 'Orchastrated acquisition of equipment that could decrease reprocessing']
 
-class App extends Component {
-
-  render() {
+function Resume() {
     return (
-      <resume>
-        <ResumeSection logo={LMlogo} company='Lockheed Martin' title='Systems Engineer (6/2018-7/2019)' accomp={sys} />
-        <ResumeSection logo={LMlogo} company='Lockheed Martin' title='Quality Engineer (7/2019-CURRENT)' accomp={qa} />
-        <h1 className='resume-title'>Technical Skills</h1>
-        <div className='container'>
-          <TechCard pic={jslogo}/>
-          <TechCard pic={reactlogo}/>
-          <TechCard pic={nodelogo}/>
-          <TechCard pic={pythonlogo}/>
-          <TechCard pic={k8slogo}/>
-          <TechCard pic={dockerlogo}/>
+        <div className='Resume'>
+            <ResumeSection logo={LMlogo} company='Lockheed Martin' title='Systems Engineer (6/2018-7/2019)' accomp={sys} />
+            <ResumeSection logo={LMlogo} company='Lockheed Martin' title='Project Engineer (7/2019-6/2020)' accomp={proj} />
+            <ResumeSection logo={LMlogo} company='Lockheed Martin' title='Project Engineer (7/2019-6/2020)' accomp={proj} />
         </div>
-      </resume>
-    )
-  }
+    );
 }
 
-export default App;
+export default Resume;
